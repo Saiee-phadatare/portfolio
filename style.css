@@ -1,0 +1,711 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    color: #ededed;
+    background: rgb(2,22,39);
+}
+
+.body{
+    padding: 70px 10% 0;
+}
+
+span{
+    color: #0ef;
+}
+
+
+/*-----NAVBAR--------*/
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 7%;
+    background: #051129;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    animation: SlideRight 1s ease forwards;
+}
+
+.navbar a{
+    display: inline-block;
+    font-size: 23px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    animation: SlideTop .5s ease forwards;
+    /*animation-delay: calc(.2s * var(--i));*/
+}
+
+.navbar a:hover{
+    color: #0ef;
+}
+
+
+/*------------------------------------------HOME-SECTION------------------------------------------------*/
+
+.home{
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    min-height: 90vh;
+    background: rgb(2,22,39);
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.home-content h3{
+    font-size: 25px;
+    font-weight: 400;
+    animation: slidebottom 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content h1{
+    font-size: 42px;
+    font-weight: 700;
+    margin: -3px 0;
+    line-height: 5rem;
+    animation: SlideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content p{
+    font-size: 20px;
+    animation: SlideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-sci a{
+    margin: 1rem .5rem;
+    padding: .5rem;
+    font-size: 1.3rem;
+    width: 40px;
+    color: #0ef;
+    border: 2.5px solid #0ef;
+    border-radius: 50%;
+    animation: SlideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.home-sci a:hover,
+.Button a:hover{
+    box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef,
+    0 0 50px #0ef,
+    0 0 100px #0ef;
+}
+
+
+.Button a{
+    margin: 1rem .5rem;
+    border: 1px solid #0ef;
+    padding: .5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #081b29;
+    background: #0ef;
+}
+
+.img img,
+.img1 img{
+    padding: .1rem;
+    box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef,
+    0 0 50px #0ef,
+    0 0;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+.img1{
+    display: none;
+}
+
+
+
+@keyframes SlideRight {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes SlideLeft {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes SlideTop {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slidebottom {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*-----------------------------------------------------------About Section-------------------------------------------------------------------*/
+
+.about-section{
+    display: flex;
+    gap: 7rem;
+    min-height: 80vh;
+}
+ 
+.about-img img{
+    margin-top: 4rem;
+    height: 300px;
+    width: 300px;
+    padding: .1rem;
+    box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef,
+    0 0 50px #0ef,
+    0 0;
+    animation: SlideRight 1s ease forwards;
+}
+
+
+.about-des h1{
+    font-size: 40px;
+    margin-top: 4rem;
+}
+
+.about-des h3{
+    text-transform: uppercase;
+    line-height: 4rem;
+}
+
+.about-des p{
+    margin-bottom: 2rem;
+}
+
+/*----------------------------------------------------------Contact-----------------------------------------------------------------------*/
+
+.contact{
+    display: flex;
+    min-height: 70vh;
+    gap: 4rem;
+}
+
+.contact-link h1{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 2rem;
+}
+
+.contact-link h3{
+    line-height: 3rem;
+    text-transform: uppercase;
+}
+
+.contact-link p{
+    margin-bottom: 1rem;
+}
+
+.contact-link i{
+    color: #0ef;
+    line-height: 2.5rem;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form .input{
+    margin: .5rem;
+    color: #fff;
+    border: 2px solid #0ef;
+    border-radius: 20px;
+    background: transparent;
+    padding: 1rem 3rem;
+}
+
+
+
+/*-----------Popup----------*/
+
+.btn{
+    padding: 10px 60px;
+    background: #fff;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 30px;
+}
+
+
+.popup{
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup img{
+    width: 100px;
+    height: 100px;
+    margin-top: -50%;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: rgb(2,22,39);
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+
+/*-------------------------------------------------------------Education------------------------------------------------------------------*/
+.education{
+    margin: 0rem 0 7rem;
+}
+
+.edu-flex{
+    display: flex;
+    gap: 3rem;
+}
+
+.education h1{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 3rem;
+}
+
+.edu{
+    border: 1px solid #0ef;
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.edu:hover{
+    box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef,
+    0 0 50px #0ef,
+    0 0;
+}
+
+.edu h3{
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+/*-------------------------------------------------------------Responsive----------------------------------------------------------------*/
+
+@media only screen and (max-width: 540px){
+
+    .navbar {
+        display: none;
+    }
+    .home{
+        flex-direction: column;
+        text-align: center;
+        gap: 0rem;
+    }
+    .home-content h1{
+        font-size: 25px;
+    }
+    .img1{
+        display: block;
+        margin: 2rem 0;
+    }
+
+    .img1 img{
+        height: 200px;
+        width: 200px;
+    }
+    .img{
+        display: none;
+    }
+    .Button{
+       text-align: center;
+    }
+
+    /*--------------------ABOUT----------------*/
+
+    .about-section{
+        display: flex;
+        flex-direction: column
+    }
+    .about-des h1,
+    .about-des h3{
+        text-align: center;
+    } 
+    .about-img img{
+        display: none;
+    }
+
+    /*-----------Education------------------*/
+
+    .education{
+        margin-top: 4rem;
+    }
+    .edu-flex{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+
+    /*---------------Contact---------------*/
+    .contact{
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    /*-------------Services--------------*/
+    .service{
+        display: flex;
+        flex-direction: column;
+    }
+    
+
+}
+/*-------------------------------------------------------footer------------------------------------------------------*/
+
+.footer{
+    background-color:#092133 ;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+
+/*---------------------------------------------------------Skills-----------------------------------------------------------------*/
+
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skillcontainer{
+    width: 600px;
+    height: 500px;
+    margin-left: 120px;
+}
+
+.skillsheading{
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+
+.bar{
+    font-size: 23px;
+}
+
+.technical-bars .bar{
+    margin-top: 40px 0;
+}
+
+.technical-bars .bar:first-child{
+    margin-top: 0;
+} 
+
+.technical-bars .bar:last-child{
+    margin-bottom: 0;
+}
+
+.technical-bars .bar .info{
+    margin-bottom: 5px;
+}
+
+.technical-bars .bar .info span{
+    font-size: 17px;
+    font-weight: 500;
+    animation: showtext 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.technical-bars .bar .progreass-line{
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #000000;
+    animation: animate 1s cubic-bezier(1,0,0,5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+@keyframes animate{
+    100%{
+        transform:  scaleX(1);
+    }
+}
+.technical-bars .bar .progreass-line span{
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1,0,0,5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.progreass-line.html span{
+    width: 90%;
+}
+.progreass-line.css span{
+    width: 70%;
+}
+.progreass-line.Javascript span{
+    width: 50%;
+}
+
+.progreass-line span::after{
+    position: absolute;
+    padding: 1px 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+
+.progreass-line.html span::after{
+    content: "90%";
+}
+.progreass-line.css span::after{
+    content: "60%";
+}
+.progreass-line.Javascript span::after{
+    content: "85%";
+}
+
+.radial-bars{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.radial-bars .radial-bar{
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.radial-bars .radial-bar svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+
+.radial-bars .radial-bar .progress-bar{
+    stroke-width: 10;
+    stop-color: #000;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+}
+
+@keyframes animate-bar {
+    100%{
+        stroke-dashoffset: -1;
+    }
+} 
+
+.path{
+    stroke-width: 10;
+    stroke: #0ef;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+
+.path-1{animation: animate-path1 1s 1s linear forwards;}
+.path-2{animation: animate-path2 1s 1s linear forwards;}
+.path-3{animation: animate-path3 1s 1s linear forwards;}
+.path-4{animation: animate-path4 1s 1s linear forwards;}
+
+
+@keyframes animate-path1{
+    100%{
+        stroke-dashoffset: 50;;
+    }
+}
+@keyframes animate-path2{
+    100%{
+        stroke-dashoffset: 175;;
+    }
+}
+@keyframes animate-path3{
+    100%{
+        stroke-dashoffset: 125;;
+    }
+}
+@keyframes animate-path4{
+    100%{
+        stroke-dashoffset: 75;;
+    }
+}
+
+.radial-bar .percentage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showtext 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.radial-bar .text{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -5px;
+    transform: translate(-50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+/*---------------------------------------------------------------services------------------------------------------------------------*/
+
+.services{
+    min-height: 50vh;
+}
+
+.servicesheading h1{
+    text-align: center;
+    font-size: 40px;
+    padding: 3rem;
+}
+
+.service{
+    display: flex;
+    gap: 4rem;
+}
+
+.box{
+    padding: 2rem;
+    border: 1px solid #0ef;
+    border-radius: 20px;
+    box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef,
+    0 0 50px #0ef,
+    0 0;
+}
+
+.box i{
+    font-size: 40px;
+    color: #0ef;
+}
+
+.box h1{
+    line-height: 3rem;
+    font-size: 1.5rem;
+}
+
+.box p{
+    margin-bottom: 1rem;
+}
+
+.btn-box{
+    border: 1px solid #0ef;
+    padding: .5rem 1rem;
+    color: #0ef;
+    border-radius: 20px;
+    text-decoration: none;
+    
+}
+
